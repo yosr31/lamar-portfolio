@@ -1,0 +1,590 @@
+/* =========================================================
+   Lamar Mohamed — Portfolio
+   Main stylesheet
+   ========================================================= */
+
+:root {
+  /* Colors — sampled directly from the Canva design (Light mode, default) */
+  --cream: #f4efe7;          /* page background */
+  --cream-light: #fcf9f3;    /* card / form background */
+  --surface: #ffffff;        /* skill circles, education cards, raised white surfaces */
+  --wheel-face: #fdfbf5;     /* skills wheel inner face */
+  --ink: #1a1a1a;            /* headings / strong text */
+  --ink-soft: #333333;       /* body text */
+  --muted: #615f5c;          /* inactive nav links, secondary text */
+  --pink: #ec9ec0;           /* accent pink (diamonds, buttons) */
+  --pink-deep: #e993c4;      /* script text pink */
+  --pink-soft: #f6c9de;      /* light pink washes */
+  --tan-btn: #d0cac2;        /* "Find out more" button */
+  --tan-btn-hover: #c7c1b8;
+  --tag-bg: #e1d6c5;         /* services tag pill */
+  --border: #c6c4bf;         /* input borders */
+  --dot-black: #111111;      /* education polka dots */
+  --edu-dot: rgba(17, 17, 17, 0.9);
+  --nav-border: rgba(0, 0, 0, 0.04);
+  --overlay-scrim: rgba(0, 0, 0, 0.25);
+  --btn-outline-dash: rgba(255, 255, 255, 0.9);
+  --btn-outline-ring: rgba(0, 0, 0, 0.08);
+  --btn-pink-text: #2a1420;
+  --btn-pink-hover: #e386b3;
+  --btn-pink-glow: rgba(236, 158, 192, 0.45);
+  --focus-ring: rgba(233, 147, 196, 0.25);
+  --close-btn-bg: #1a1a1a;
+  --card-border: rgba(0, 0, 0, 0.06);
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-strong: 0 24px 40px rgba(0, 0, 0, 0.22);
+  --shadow-edu: 0 26px 46px rgba(0, 0, 0, 0.18);
+  --shadow-edu-inner: 0 6px 14px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 18px 34px rgba(0, 0, 0, 0.12);
+  --nav-drawer-shadow: -12px 0 30px rgba(0, 0, 0, 0.08);
+  --edu-frame: #f2b8d0;
+  --icon-chip: #ffffff;
+  --font-script: "Alex Brush", cursive;
+  --font-heading: "Alex Brush", cursive;
+  --font-sans: "Poppins", sans-serif;
+
+  --max-width: 1180px;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --cream: #221a1d;
+  --cream-light: #2c2225;
+  --surface: #382c30;
+  --wheel-face: #241b1e;
+  --ink: #f7f1ea;
+  --ink-soft: #d9cfc9;
+  --muted: #ab9c95;
+  --pink: #f0a8c9;
+  --pink-deep: #f2aad0;
+  --pink-soft: #4a323d;
+  --tan-btn: #4a3f38;
+  --tan-btn-hover: #5b4e45;
+  --tag-bg: #4a3c33;
+  --border: #5a4c45;
+  --dot-black: #f0a8c9;
+  --edu-dot: rgba(240, 168, 201, 0.35);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --overlay-scrim: rgba(0, 0, 0, 0.5);
+  --btn-outline-dash: rgba(255, 255, 255, 0.3);
+  --btn-outline-ring: rgba(255, 255, 255, 0.1);
+  --btn-pink-text: #2a1420;
+  --btn-pink-hover: #f2b6d6;
+  --btn-pink-glow: rgba(242, 170, 208, 0.35);
+  --focus-ring: rgba(242, 170, 208, 0.3);
+  --close-btn-bg: #efe6e0;
+  --card-border: rgba(255, 255, 255, 0.08);
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-strong: 0 24px 40px rgba(0, 0, 0, 0.55);
+  --shadow-edu: 0 26px 46px rgba(0, 0, 0, 0.5);
+  --shadow-edu-inner: 0 6px 14px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 18px 34px rgba(0, 0, 0, 0.4);
+  --nav-drawer-shadow: -12px 0 30px rgba(0, 0, 0, 0.5);
+  --edu-frame: #c96e96;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #221a1d;
+    --cream-light: #2c2225;
+    --surface: #382c30;
+    --wheel-face: #241b1e;
+    --ink: #f7f1ea;
+    --ink-soft: #d9cfc9;
+    --muted: #ab9c95;
+    --pink: #f0a8c9;
+    --pink-deep: #f2aad0;
+    --pink-soft: #4a323d;
+    --tan-btn: #4a3f38;
+    --tan-btn-hover: #5b4e45;
+    --tag-bg: #4a3c33;
+    --border: #5a4c45;
+    --dot-black: #f0a8c9;
+    --edu-dot: rgba(240, 168, 201, 0.35);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --overlay-scrim: rgba(0, 0, 0, 0.5);
+    --btn-outline-dash: rgba(255, 255, 255, 0.3);
+    --btn-outline-ring: rgba(255, 255, 255, 0.1);
+    --btn-pink-hover: #f2b6d6;
+    --btn-pink-glow: rgba(242, 170, 208, 0.35);
+    --focus-ring: rgba(242, 170, 208, 0.3);
+    --close-btn-bg: #efe6e0;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --shadow-strong: 0 24px 40px rgba(0, 0, 0, 0.55);
+    --shadow-edu: 0 26px 46px rgba(0, 0, 0, 0.5);
+    --shadow-edu-inner: 0 6px 14px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 18px 34px rgba(0, 0, 0, 0.4);
+    --nav-drawer-shadow: -12px 0 30px rgba(0, 0, 0, 0.5);
+    --edu-frame: #c96e96;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+main {
+  display: block;
+  overflow-x: hidden;
+}
+
+/* Smooth, consistent theme transition across themed surfaces.
+   Elements that already animate other properties (transform, opacity)
+   keep those working — this only adds color-related transitions. */
+.site-nav,
+.pill-link,
+.btn-outline,
+.btn-pink,
+.service-panel,
+.contact-form-card,
+.edu-card,
+.edu-card .edu-desc,
+.project-card,
+.skills-wheel .ring-cream,
+.skill-item,
+.form-field input,
+.form-field textarea,
+.about-copy p,
+.contact-row a,
+.education-section,
+input,
+textarea,
+h1, h2, h3, p, a, span {
+  transition: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.script {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+/* =========================================================
+   Navigation
+   ========================================================= */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: var(--cream);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.site-nav .nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 32px;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 4px 2px;
+  position: relative;
+  transition: color 0.25s ease;
+  text-transform: lowercase;
+}
+
+.site-nav a:first-child {
+  text-transform: none;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+}
+
+.site-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.site-nav a.active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--ink);
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle span::before {
+  position: absolute;
+  top: -8px;
+}
+
+.nav-toggle span::after {
+  position: absolute;
+  top: 8px;
+}
+
+/* ---- theme toggle ---- */
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: var(--cream-light);
+  margin-left: 6px;
+  flex: 0 0 auto;
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  color: var(--ink);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    margin-left: 0;
+    margin-right: 8px;
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-nav .nav-inner {
+    justify-content: space-between;
+    padding: 18px 24px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav .nav-links {
+    display: flex;
+    transition: transform 0.35s ease, background-color 0.35s ease;
+    position: fixed;
+    inset: 0 0 0 auto;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--cream-light);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 36px 36px;
+    gap: 22px !important;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    box-shadow: var(--nav-drawer-shadow);
+  }
+
+  .site-nav .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .site-nav .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  body.nav-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-scrim);
+    z-index: 400;
+  }
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.btn-outline {
+  display: inline-block;
+  background: var(--tan-btn);
+  border: 2px dashed var(--btn-outline-dash);
+  outline: 1px solid var(--btn-outline-ring);
+  border-radius: 999px;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  background: var(--tan-btn-hover);
+}
+
+.btn-pink {
+  display: inline-block;
+  background: var(--pink);
+  border: none;
+  border-radius: 999px;
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--btn-pink-text);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-pink:hover {
+  background: var(--btn-pink-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--btn-pink-glow);
+}
+
+.pill-link {
+  display: inline-block;
+  background: var(--cream-light);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.pill-link:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: var(--surface);
+}
+
+/* =========================================================
+   Decorative sparkle (inline SVG via mask) — reusable
+   ========================================================= */
+
+.sparkle-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 0 C55 35 65 45 100 50 C65 55 55 65 50 100 C45 65 35 55 0 50 C35 45 45 35 50 0Z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 0 C55 35 65 45 100 50 C65 55 55 65 50 100 C45 65 35 55 0 50 C35 45 45 35 50 0Z'/></svg>") center / contain no-repeat;
+}
+
+/* =========================================================
+   Page section spacing helpers
+   ========================================================= */
+
+.page-section {
+  padding-top: 64px;
+  padding-bottom: 100px;
+  scroll-margin-top: 88px;
+}
+
+.hero {
+  scroll-margin-top: 88px;
+}
+
+@media (max-width: 760px) {
+  .page-section,
+  .hero {
+    scroll-margin-top: 72px;
+  }
+
+  .page-section {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  color: var(--ink);
+  margin: 0 0 40px;
+  line-height: 1;
+}
+
+.section-title.pink {
+  color: var(--pink-deep);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.site-footer {
+  border-top: 1px solid var(--nav-border);
+  padding: 40px 0 36px;
+  transition: border-color 0.35s ease;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cream-light);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, background-color 0.35s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-socials img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.footer-socials a[aria-label="LinkedIn"] img {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   Utility
+   ========================================================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

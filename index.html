@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lamar Mohamed — Software Engineering Student &amp; Freelance Developer</title>
+<meta name="description" content="Portfolio of Lamar Mohamed, a Software Engineering student and freelance developer turning ideas into practical, reliable software solutions." />
+
+<link rel="icon" type="image/png" href="assets/images/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/home.css" />
+<link rel="stylesheet" href="assets/css/about.css" />
+<link rel="stylesheet" href="assets/css/skills.css" />
+<link rel="stylesheet" href="assets/css/projects.css" />
+<link rel="stylesheet" href="assets/css/services.css" />
+<link rel="stylesheet" href="assets/css/education.css" />
+<link rel="stylesheet" href="assets/css/contact.css" />
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<main>
+<section class="hero container" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Hi, my name is</p>
+      <h1 class="hero-name script">Lamar<span class="line2">mohamed</span></h1>
+      <p class="hero-desc"><strong>I&rsquo;m a Software Engineering student</strong> and freelance developer turning ideas into practical, reliable software solutions.</p>
+      <div class="hero-cta-wrap"><a href="#about" class="btn-outline">FIND OUT MORE</a></div>
+    </div>
+
+    <div class="hero-visual">
+      <img class="sparkle sparkle-top" src="assets/images/decor/sparkle-dark.png" alt="" aria-hidden="true" />
+      <img class="sparkle sparkle-top-2" src="assets/images/decor/sparkle-dark.png" alt="" aria-hidden="true" />
+      <img class="sparkle sparkle-right-1" src="assets/images/decor/sparkle-dark.png" alt="" aria-hidden="true" />
+      <img class="sparkle sparkle-right-2" src="assets/images/decor/sparkle-dark.png" alt="" aria-hidden="true" />
+      <img class="arrow-dashed" src="assets/images/decor/arrow-dashed.png" alt="" aria-hidden="true" />
+
+      <div class="laptop-stage">
+        <button class="laptop-trigger" type="button" aria-expanded="false" aria-label="Click to reveal a photo">
+          <img src="assets/images/home/laptop.png" alt="Illustration of a pink iBook laptop" />
+          <img class="desktop-folder-icon" src="assets/images/home/desktop-folder.png" alt="" aria-hidden="true" />
+          <span class="click-hint">Click me!</span>
+        </button>
+
+        <div class="reveal-photo" aria-hidden="true">
+          <img src="assets/images/home/reveal-word.jpg" alt="A photo of Lamar, framed like a retro Word document window" />
+          <button class="reveal-close" type="button" aria-label="Close photo">&times;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="page-section container" id="about">
+    <h1 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto;">About me</h1>
+
+    <div class="about-copy">
+      <p>I&rsquo;m a Software Engineering student and aspiring freelance developer who enjoys turning ideas into practical software solutions. For me, coding isn&rsquo;t just about writing lines of code &mdash; it&rsquo;s about understanding a problem, figuring out how to solve it, and building something that actually works.</p>
+      <hr class="about-divider" />
+      <p>Through my university projects and technical training, I&rsquo;ve gained hands-on experience with Java, Python, and C++, as well as Object-Oriented Programming, Data Structures, JavaFX, and MySQL. I&rsquo;ve worked on projects that challenged me to think beyond the code, from designing the structure of an application to connecting it with a database and creating a user-friendly experience.</p>
+      <hr class="about-divider" />
+      <p>I&rsquo;m naturally curious and always looking for something new to learn. I&rsquo;m currently building my experience as a freelancer, taking on projects that allow me to apply what I know, grow as a developer, and create solutions that are simple, reliable, and useful.</p>
+      <hr class="about-divider" />
+      <p>If you have an idea you want to turn into a working product, I&rsquo;d love to be part of the process.</p>
+    </div>
+
+    <div class="folder-wrap">
+      <img class="folder-base" src="assets/images/about/folder-base.png" alt="Illustration of a pink file folder" />
+      <div class="folder-lace-box">
+        <img class="folder-lace" src="assets/images/about/lace-corner.png" alt="" aria-hidden="true" />
+      </div>
+      <nav class="folder-links" aria-label="Quick links">
+        <a class="pill-link" href="#skills">Skills</a>
+        <a class="pill-link" href="#projects">Projects</a>
+        <a class="pill-link" href="#services">Services</a>
+        <a class="pill-link" href="#education">Education</a>
+        <a class="pill-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </section>
+
+<section class="page-section container" id="skills">
+    <div class="skills-layout">
+      <div class="skills-col">
+        <h1 class="section-title">Skills</h1>
+
+        <div class="skills-intro-block">
+          <span class="label">A snapshot of my technical toolkit &mdash; hover or tap any icon to see my proficiency.</span>
+        </div>
+      </div>
+
+      <div class="skills-wheel">
+        <img class="doily" src="assets/images/skills/doily.png" alt="" aria-hidden="true" />
+        <div class="ring-pink"></div>
+        <div class="ring-black"></div>
+        <div class="ring-cream"></div>
+        <div class="wheel-inner" id="skills-icons" aria-label="Skills, hover or tap each icon for proficiency"></div>
+      </div>
+    </div>
+  </section>
+
+<section class="page-section container" id="projects">
+    <h1 class="section-title">Projects</h1>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-thumb"><img src="assets/images/projects/tourify.jpg" alt="Tourify app screenshot showing the global inventory admin page" loading="lazy" /></div>
+        <div class="project-body">
+          <h2>Tourify</h2>
+          <div class="project-tags"><span>Java</span><span>JavaFX</span><span>MySQL</span><span>JDBC</span><span>TCP Sockets</span></div>
+          <p class="desc">A travel guide desktop application that helps users discover destinations, explore places, manage travel budgets, save favorites, track visited places, and share reviews and ratings.</p>
+
+          <p class="project-purpose"><strong>Purpose:</strong> Give travellers one place to plan a trip end to end &mdash; find destinations that fit their budget, keep track of where they&rsquo;ve been, and learn from other travellers&rsquo; reviews.</p>
+
+          <ul class="project-highlights">
+            <li>Client&ndash;server architecture using TCP sockets for communication with the authentication server</li>
+            <li>MySQL database via JDBC for users, destinations, places, favorites, visits, and reviews</li>
+            <li>Full system design documented with Context, Use Case, Activity, Sequence, Architecture, Class, and Database diagrams</li>
+            <li>Role-based access separating User and Admin functionality</li>
+            <li>Budget-aware recommendation logic that suggests destinations matching the user&rsquo;s travel budget</li>
+            <li>Desktop interface built with JavaFX 21</li>
+          </ul>
+
+          <p class="project-demonstrates"><strong>Demonstrates:</strong> networked application design, relational data modelling, UML &amp; system design, role-based access control</p>
+
+          <a class="project-link" href="https://github.com/Lamarmohamedd" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb"><img src="assets/images/projects/bakery.jpg" alt="Bakery Management System app screenshot showing account creation" loading="lazy" /></div>
+        <div class="project-body">
+          <h2>Bakery Management System</h2>
+          <div class="project-tags"><span>C++</span><span>Qt6</span><span>SQLite</span><span>CMake</span></div>
+          <p class="desc">A desktop application for managing bakery operations, including customer queues, bread production, inventory, staff management, and subsidized bread orders.</p>
+
+          <p class="project-purpose"><strong>Purpose:</strong> Model how a bakery actually runs &mdash; fair customer queuing, realistic production limits, and secure staff access &mdash; rather than a simple CRUD system.</p>
+
+          <ul class="project-highlights">
+            <li>Clean layered architecture separating Database, Service, and UI responsibilities</li>
+            <li>Priority queue that serves customers fairly, prioritising elderly and pregnant customers</li>
+            <li>Bread production tracking across multiple baking shifts, with oven-capacity validation, batch tracking, and inventory updates</li>
+            <li>Stack and queue structures used to model real bakery operations</li>
+            <li>SHA-256 hashing for staff passwords and manager PINs</li>
+            <li>Prepared SQL statements to guard against SQL injection</li>
+            <li>Qt signals and slots keeping separate UI sections in sync</li>
+          </ul>
+
+          <p class="project-demonstrates"><strong>Demonstrates:</strong> layered software architecture, data structures in practice, security-conscious development, event-driven UI design</p>
+
+          <a class="project-link" href="https://github.com/Lamarmohamedd" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb"><img src="assets/images/projects/sater.jpg" alt="Sater Cryptograph app screenshot showing the cipher selection wheel" loading="lazy" /></div>
+        <div class="project-body">
+          <h2>Sater Cryptograph</h2>
+          <div class="project-tags"><span>Python</span><span>PyQt6</span><span>MySQL</span></div>
+          <p class="desc">An interactive cybersecurity toolkit for learning and experimenting with classical cryptographic algorithms through encryption, decryption, file integration, and activity logging.</p>
+
+          <p class="project-purpose"><strong>Purpose:</strong> Implement classical ciphers from first principles and make them explorable, so the maths behind each algorithm is something you can actually play with.</p>
+
+          <ul class="project-highlights">
+            <li>Implements Caesar, Affine, Rail Fence, Columnar Transposition, Vigen&egrave;re, and ROT13 ciphers</li>
+            <li>Cryptographic logic kept in its own <code>src/</code> layer, separate from the interface</li>
+            <li>MVC-style separation across <code>gui/</code>, <code>src/</code>, and <code>controllers/</code> for presentation, algorithms, and data access</li>
+            <li>MySQL activity log recording every encryption and decryption operation</li>
+            <li>File I/O for loading plaintext from files and saving encrypted results</li>
+            <li>Custom PyQt6 interface styled with QSS, featuring animated transitions and glassmorphism</li>
+          </ul>
+
+          <p class="project-demonstrates"><strong>Demonstrates:</strong> algorithm implementation, modular code structure, database logging, custom UI development</p>
+
+          <a class="project-link" href="https://github.com/Lamarmohamedd" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+<section class="page-section container" id="services">
+    <h1 class="section-title">Services</h1>
+
+    <p class="services-intro">A few things I can help you build.</p>
+
+    <div class="services-list">
+      <article class="service-card">
+        <span class="service-diamond sparkle-icon" aria-hidden="true"></span>
+        <div class="service-panel">
+          <h2>Software Development</h2>
+          <span class="service-tags">Java &bull; Python &bull; C++</span>
+          <p class="desc">Practical, reliable software built from the ground up &mdash; from the initial idea to a working solution.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-diamond sparkle-icon" aria-hidden="true"></span>
+        <div class="service-panel">
+          <h2>Desktop Applications</h2>
+          <span class="service-tags">Java &bull; JavaFX</span>
+          <p class="desc">Full desktop applications built with Java and JavaFX &mdash; structured underneath, and easy to actually use.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-diamond sparkle-icon" aria-hidden="true"></span>
+        <div class="service-panel">
+          <h2>Databases &amp; Data Analysis</h2>
+          <span class="service-tags">MySQL &bull; SQLite &bull; Data Analysis</span>
+          <p class="desc">Databases designed to hold up, plus digging into data to find what it&rsquo;s actually telling you.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-diamond sparkle-icon" aria-hidden="true"></span>
+        <div class="service-panel">
+          <h2>Web &amp; Design</h2>
+          <span class="service-tags">Websites &bull; Canva &bull; UI Design</span>
+          <p class="desc">Websites built from scratch, and clean, intentional designs &mdash; from a full site to the visuals that go with it.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+<section class="page-section education-section" id="education">
+    <div class="container">
+      <h1 class="section-title education-title">Education</h1>
+    </div>
+
+    <div class="education-cards">
+      <article class="edu-card edu-card--degree">
+        <img class="edu-logo" src="assets/images/education/aastmt-logo.png" alt="Arab Academy for Science, Technology and Maritime Transport logo" />
+        <div class="edu-card-header">
+          <p class="edu-date">2024&ndash;2028</p>
+          <h2>Bachelor of Computer Science</h2>
+          <p class="edu-date" style="margin-top:2px;">Major in Software Engineering</p>
+        </div>
+        <p class="edu-desc">Building a strong foundation in Software Engineering through programming, problem-solving, OOP, data structures, and database development.</p>
+        <p class="edu-institution">Arab Academy for Science, Technology and Maritime Transport (AASTMT)</p>
+      </article>
+
+      <article class="edu-card edu-card--depi">
+        <img class="edu-logo" src="assets/images/education/depi-logo.png" alt="Digital Egypt Pioneers Initiative logo" />
+        <div class="edu-card-header">
+          <p class="edu-date">2026 &ndash; 2027</p>
+          <h2>Digital Egypt Pioneers Initiative (DEPI) &mdash; AI &amp; Data Science</h2>
+        </div>
+        <p class="edu-desc">Expanding my technical skills through practical training in AI and Data Science while developing analytical thinking and real-world project experience.</p>
+        <p class="edu-institution">Ministry of Communications and Information Technology (MCIT)</p>
+      </article>
+    </div>
+  </section>
+
+<section class="page-section container" id="contact">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h1 class="section-title pink" style="margin-bottom:6px;">Contact</h1>
+        <h2>Let&rsquo;s Work Together</h2>
+        <p class="lede">Have an idea or a project in mind? Let&rsquo;s turn it into something real. I&rsquo;d love to hear from you.</p>
+
+        <div class="contact-row">
+          <img src="assets/icons/envelope-pink.png" alt="" aria-hidden="true" />
+          <div>
+            <span class="label">Email</span>
+            <a href="mailto:lamarmsalama@gmail.com">lamarmsalama@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <img src="assets/icons/phone-pink.png" alt="" aria-hidden="true" />
+          <div>
+            <span class="label">Phone</span>
+            <a href="tel:+201118092145">+20 1118092145</a>
+          </div>
+        </div>
+
+        <span class="find-online">Find Me Online</span>
+
+        <div class="social-row">
+          <img src="assets/icons/skills/github.png" alt="" aria-hidden="true" />
+          <a href="https://github.com/Lamarmohamedd" target="_blank" rel="noopener">github.com/Lamarmohamedd</a>
+        </div>
+
+        <div class="social-row">
+          <img src="assets/icons/linkedin-badge.png" alt="" aria-hidden="true" />
+          <a href="https://linkedin.com/in/lamar-mohamed" target="_blank" rel="noopener">linkedin.com/in/lamar-mohamed</a>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h2>Contact Form</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="request">your request</label>
+            <textarea id="request" name="request"></textarea>
+          </div>
+          <button type="submit" class="btn-pink submit-btn">Submit</button>
+          <p class="form-disclaimer">Your information is only used to reply to you. Never share passwords in this form.</p>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div class="footer-socials">
+      <a href="https://github.com/Lamarmohamedd" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="assets/icons/skills/github.png" alt="" aria-hidden="true" />
+      </a>
+      <a href="https://linkedin.com/in/lamar-mohamed" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin-badge.png" alt="" aria-hidden="true" />
+      </a>
+      <a href="mailto:lamarmsalama@gmail.com" aria-label="Email">
+        <img src="assets/icons/envelope-pink.png" alt="" aria-hidden="true" />
+      </a>
+    </div>
+    <p class="footer-copy">&copy; <span id="footer-year"></span> Lamar Mohamed. Built with care, one section at a time.</p>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/sound.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/skills-data.js"></script>
+<script src="assets/js/skills.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>
